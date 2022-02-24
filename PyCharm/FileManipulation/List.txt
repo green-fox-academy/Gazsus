@@ -1,0 +1,6 @@
+Bevásárló lista:
+	-tojás (10db)
+	-sajt
+	-sonka
+	-kenyér
+	-virsli
