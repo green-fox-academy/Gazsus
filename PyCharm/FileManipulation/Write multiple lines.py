@@ -8,10 +8,17 @@
 # into the file and each line should read "apple".
 # The function should not raise any errors if it could not write the file.
 
+import os
+
 def write_multiple_lines(path, word, number):
-    path = open(path, 'w')
-    with open(path, 'w') as path:
-        for line in word:
-            path.write(word)
-            path.write('\n')
+    try:
+        word = (word + "\n") * number
+        path = open(path, "w")
+        path.write(word)
+    except:
+        print('Error: file corrupted')
+
+
+write_multiple_lines(os.path.join('C:\Users\GAZSI\Sulis Piton\Gazsus\PyCharm\FileManipulation', 'file.txt'), 'apple', 13)
+
 
