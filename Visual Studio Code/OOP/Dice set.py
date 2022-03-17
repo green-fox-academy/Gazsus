@@ -7,7 +7,7 @@ class DiceSet(object):
         self.dices = [0, 0, 0, 0, 0, 0]
 
     def roll(self):
-        for i in range(len(self.dice)):
+        for i in range(len(self.dices)):
             self.dices[i] = random.randint(1, 6)
         return self.dices
 
@@ -30,6 +30,12 @@ dice_set.roll()
 print(dice_set.get_current())
 dice_set.reroll(3)
 print(dice_set.get_current(3))
+print(dice_set.get_current())
+
+for i in range(len(dice_set.dices)):
+    while dice_set.dices[i] != 6:
+        dice_set.reroll(i)
+
 print(dice_set.get_current())
 
 
