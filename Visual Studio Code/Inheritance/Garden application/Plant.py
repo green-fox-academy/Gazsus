@@ -6,3 +6,7 @@ class Plant():
         self.water_level = water_level
         self.absorb_level = absorb_level
         self.needs_water_at = needs_water_at
+
+    def water_plant(self, amount):
+        if self.water_level < self.needs_water_at:
+            self.water_level += amount*self.absorb_level
